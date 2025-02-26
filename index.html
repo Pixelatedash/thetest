@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="browser">
-        <div id="toolbar">
-            <button id="back">⟵</button>
-            <button id="forward">⟶</button>
-            <button id="reload">⟳</button>
-            <input type="text" id="url" placeholder="Enter URL...">
-            <button id="go">Go</button>
-        </div>
-        <div id="tabs">
-            <div class="tab active" data-id="home">Home <span class="close">×</span></div>
-            <button id="newTab">+</button>
-        </div>
-        <div id="content">
-            <iframe id="home" src="home.html"></iframe>
-        </div>
+    <div id="tabs">
+        <button id="newTab">+</button>
     </div>
+    <div id="controls">
+        <button id="back">◀</button>
+        <button id="forward">▶</button>
+        <button id="reload">⟳</button>
+        <input type="text" id="url" placeholder="Enter a URL...">
+        <button id="go">Go</button>
+    </div>
+    <div id="content"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
