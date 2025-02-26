@@ -1,70 +1,45 @@
 body {
-    margin: 0;
+    background-color: #f5deb3; /* Dull yellow background */
     font-family: Arial, sans-serif;
-    background-color: #181818;
-    color: white;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-}
-
-#browser {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-#toolbar {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #242424;
-    border-bottom: 1px solid #333;
-}
-
-#toolbar button, #toolbar input {
-    background: none;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#toolbar input {
-    flex: 1;
-    background: #333;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 #tabs {
     display: flex;
-    background-color: #181818;
+    align-items: center;
+    background: #d3d3d3; /* Chrome-like gray */
     padding: 5px;
-    border-bottom: 1px solid #333;
+    border-bottom: 2px solid #aaa;
 }
 
 .tab {
     padding: 10px 15px;
-    background: #242424;
     margin-right: 5px;
+    background: #e0e0e0;
     border-radius: 10px 10px 0 0;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .tab.active {
-    background: #333;
+    background: white;
+    font-weight: bold;
 }
 
-.close {
+.tab .close {
     margin-left: 10px;
     cursor: pointer;
     color: red;
 }
 
 #content {
-    flex: 1;
-    position: relative;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 iframe {
