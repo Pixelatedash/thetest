@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Holy Browser in a Browser v5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="browser">
+        <div id="toolbar">
+            <button id="back">⟵</button>
+            <button id="forward">⟶</button>
+            <button id="reload">⟳</button>
+            <input type="text" id="url" placeholder="Enter URL...">
+            <button id="go">Go</button>
+        </div>
+        <div id="tabs">
+            <div class="tab active" data-id="home">Home <span class="close">×</span></div>
+            <button id="newTab">+</button>
+        </div>
+        <div id="content">
+            <iframe id="home" src="home.html"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
