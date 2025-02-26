@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const backButton = document.getElementById("back");
     const forwardButton = document.getElementById("forward");
     const reloadButton = document.getElementById("reload");
-    let tabCount = 1;
+    let tabCount = 0;
 
-    function createTab(url = "home.html") {
+    function createTab(url = "https://google.com") {
         tabCount++;
         const tabId = `tab${tabCount}`;
         const tab = document.createElement("div");
         tab.classList.add("tab");
         tab.dataset.id = tabId;
-        tab.innerHTML = `New Tab <span class="close">×</span>`;
+        tab.innerHTML = `Tab ${tabCount} <span class="close">×</span>`;
         tabs.insertBefore(tab, newTabButton);
 
         const iframe = document.createElement("iframe");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    newTabButton.addEventListener("click", () => createTab("https://example.com"));
+    newTabButton.addEventListener("click", () => createTab());
 
     goButton.addEventListener("click", () => {
         const activeTab = document.querySelector(".tab.active");
@@ -72,4 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const activeTab = document.querySelector(".tab.active");
         if (activeTab) document.getElementById(activeTab.dataset.id).contentWindow.location.reload();
     });
+
+    createTab();
 });
